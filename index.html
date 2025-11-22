@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hwy-Heaven Ministry</title>
+  <style>
+    /* ===== Global Styles ===== */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      background: #333;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 1rem;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: #555;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      background: rgba(0,0,0,0.5);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h3 {
+      color: #2a5298;
+      margin-bottom: 1rem;
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #1e3c72;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* ===== Responsive Design ===== */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+      .hero h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header>
+    <h1>Hwy-Heaven Ministry</h1>
+    <p>Purpose and Comfort for Truckers & RV Travelers</p>
+  </header>
+
+  <!-- ===== Navigation ===== -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#resources">Resources</a>
+    <a href="#community">Community</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ===== Hero Section ===== -->
+  <div class="hero">
+    <h2>Finding Faith & Fellowship on the Open Road</h2>
+  </div>
+
+  <!-- ===== About Section ===== -->
+  <section id="about">
+    <h3>About Hwy-Heaven</h3>
+    <div class="card">
+      <p>
+        Hwy-Heaven is a ministry dedicated to serving truckers and RV travelers across America. 
+        We provide spiritual encouragement, practical resources, and a welcoming community for those 
+        who spend their lives on the road. Our mission is to bring purpose, comfort, and fellowship 
+        wherever your journey takes you.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Resources Section ===== -->
+  <section id="resources">
+    <h3>Resources for the Road</h3>
+    <div class="card">
+      <ul>
+        <li>Daily devotionals tailored for life on the highway</li>
+        <li>Prayer requests and support network</li>
+        <li>Safe stop recommendations for truckers & RV travelers</li>
+        <li>Encouraging podcasts and scripture readings</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Community Section ===== -->
+  <section id="community">
+    <h3>Join Our Community</h3>
+    <div class="card">
+      <p>
+        Connect with fellow travelers through our online fellowship group. Share stories, 
+        find encouragement, and build friendships that last beyond the miles.
+      </p>
+      <button onclick="joinCommunity()">Join Now</button>
+    </div>
+  </section>
+
+  <!-- ===== Contact Section ===== -->
+  <section id="contact">
+    <h3>Contact Us</h3>
+    <div class="card">
+      <form onsubmit="return sendMessage()">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" rows="4" required></textarea><br><br>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>&copy; 2025 Hwy-Heaven Ministry | Serving Truckers & RV Travelers</p>
+  </footer>
+
+  <!-- ===== JavaScript ===== -->
+  <script>
+    function joinCommunity() {
+      alert("Thank you for joining our Hwy-Heaven community! We'll be in touch soon.");
+    }
+
+    function sendMessage() {
+      const name = document.getElementById('name').value;
+      const message = document.getElementById('message').value;
+      alert(`Thank you, ${name}! Your message has been received:\n"${message}"`);
+      return false; // Prevent actual form submission
+    }
+  </script>
+</body>
+</html>
