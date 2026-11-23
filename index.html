@@ -1,42 +1,81 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hwy-Heaven Ministry</title>
+
   <!-- Link to external CSS -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Video gallery styling -->
+  <style>
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      width: 100%;
+      margin: 20px auto;
+    }
+
+    .video-item {
+      min-width: 0;
+      aspect-ratio: 16 / 9;
+    }
+
+    .video-item iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 900px) {
+      .video-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <img
-    src="hwyheavenlogo.png"
-    alt="Hwy-Heaven Ministry Logo"
-    style="max-width: 250px; height: auto; display: block; margin: 0 auto 20px;"
-  >
-  <h1>Hwy-Heaven Ministry</h1>
-  <p>Purpose and Comfort for Truckers &amp; RV Travelers</p>
-</header>
-
+  <header>
+    <img
+      src="hwyheavenlogo.png"
+      alt="Hwy-Heaven Ministry Logo"
+      style="max-width: 250px; height: auto; display: block; margin: 0 auto 20px;"
+    >
+    <h1>Hwy-Heaven Ministry</h1>
+    <p>Purpose and Comfort for Truckers &amp; RV Travelers</p>
+  </header>
 
   <nav>
     <a href="#about">About</a>
     <a href="#resources">Resources</a>
+    <a href="#videos">Videos</a>
     <a href="#community">Community</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <div class="hero">
-    <h2>Finding Faith & Fellowship on the Open Road</h2>
+    <h2>Finding Faith &amp; Fellowship on the Open Road</h2>
   </div>
 
   <section id="about">
     <h3>About Hwy-Heaven</h3>
     <div class="card">
       <p>
-        Hwy-Heaven is a ministry dedicated to serving truckers and RV travelers across America. 
-        We provide spiritual encouragement, practical resources, and a welcoming community for those 
+        Hwy-Heaven is a ministry dedicated to serving truckers and RV travelers across America.
+        We provide spiritual encouragement, practical resources, and a welcoming community for those
         who spend their lives on the road.
       </p>
     </div>
@@ -48,9 +87,54 @@
       <ul>
         <li>Daily devotionals tailored for life on the highway</li>
         <li>Prayer requests and support network</li>
-        <li>Safe stop recommendations for truckers & RV travelers</li>
+        <li>Safe stop recommendations for truckers &amp; RV travelers</li>
         <li>Encouraging podcasts and scripture readings</li>
       </ul>
+    </div>
+  </section>
+
+  <!-- YouTube Video Section -->
+  <section id="videos">
+    <h3>Videos from Hwy-Heaven</h3>
+
+    <div class="video-grid">
+
+      <!-- Video 1 -->
+      <div class="video-item">
+        <iframe
+          src="https://www.youtube.com/embed/wJzkJUb317Y?si=pvs6gpaqkzfKeIcL"
+          title="Hwy-Heaven Video 1"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="video-item">
+        <iframe
+          src="https://www.youtube.com/embed/5pb5eTkL13M?si=mlz4uZxCFB1Hx_E3"
+          title="Hwy-Heaven Video 2"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="video-item">
+        <iframe
+          src="https://www.youtube.com/embed/abdChDc4d9c?si=FuYGNAgt8oeGfcId"
+          title="Hwy-Heaven Video 3"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+
     </div>
   </section>
 
@@ -78,10 +162,11 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Hwy-Heaven Ministry | Serving Truckers & RV Travelers</p>
+    <p>&copy; 2025 Hwy-Heaven Ministry | Serving Truckers &amp; RV Travelers</p>
   </footer>
 
   <!-- External JS -->
   <script src="script.js"></script>
+
 </body>
 </html>
